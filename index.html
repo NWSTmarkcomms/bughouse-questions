@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bug House Marketing Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .pdf-embed {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .video-banner {
+      width: 100%;
+      height: 200px; /* Minimal height */
+      overflow: hidden;
+    }
+
+    .video-banner video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    main {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-nav-container">
+    <img src="images/logo-placeholder.png" alt="Bug House Logo" class="logo">
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="leave-behinds.html">Leave Behinds</a>
+      <a href="door-hangers.html">Door Hangers</a>
+      <a href="thank-you-cards.html">Thank You Cards</a>
+      <a href="coffee-shop-cards.html">Coffee Shop Ta...</a>
+      <a href="questions.html">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 🔽 Minimal Video Banner Section -->
+<div class="video-banner">
+  <video autoplay muted loop playsinline>
+    <source src="videos/video.portal.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<main>
+  <iframe 
+    class="pdf-embed" 
+    src="doc.guide.pdf" 
+    allowfullscreen>
+  </iframe>
+</main>
+
+<footer>
+  <p>© 2025 Bug House Pest Control — Live Healthier Today</p>
+</footer>
+
+<script>
+  function handleSubmit(event, form) {
+    setTimeout(() => {
+      const parent = form.parentElement;
+      parent.innerHTML = `
+        <div class="thank-you-message">
+          <p>✅ You Make Pest Control Look Good! Your order will arrive at your office in less than 2 weeks. Thank you!</p>
+        </div>
+      `;
+    }, 500);
+  }
+</script>
+
+</body>
+</html>
